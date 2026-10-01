@@ -1,0 +1,30 @@
+<h2>Definição rápida</h2>
+<p>Closure é quando uma função <strong>lembra do escopo onde nasceu</strong>, mesmo depois que esse escopo já terminou. É o que permite "variáveis privadas" em JavaScript.</p>
+
+<div class="callout"><strong>Mnemônico:</strong> closure = função + a mochila das variáveis ao redor dela.</div>
+
+<h2>Exemplo 1 — contador</h2>
+<pre><code>function criarContador() {
+  let n = 0; // vive na "mochila" da closure
+  return () => ++n;
+}
+
+const c = criarContador();
+console.log(c()); // 1
+console.log(c()); // 2</code></pre>
+
+<h3>Por que funciona?</h3>
+<p>A arrow function retornada continua referenciando <code>n</code>. Como existe referência, o garbage collector não limpa <code>n</code>.</p>
+
+<h2>Exemplo 2 — entrevista</h2>
+<pre><code>for (var i = 0; i &lt; 3; i++) {
+  setTimeout(() => console.log(i), 100); // 3, 3, 3 😅
+}
+
+for (let j = 0; j &lt; 3; j++) {
+  setTimeout(() => console.log(j), 100); // 0, 1, 2 ✓
+}</code></pre>
+
+<p>Com <code>var</code>, há uma única variável compartilhada. Com <code>let</code>, cada iteração ganha seu próprio binding — cada timeout fecha (closure) sobre um valor diferente.</p>
+
+<blockquote>Se perguntarem "para que serve closure?", responda: encapsulamento, factories, debounce, memoize.</blockquote>

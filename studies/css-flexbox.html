@@ -1,0 +1,21 @@
+<h2>A ideia em 10 segundos</h2>
+<p>Flexbox alinha coisas em <strong>um eixo por vez</strong>. Defina o container como <code>display: flex</code> e escolha a direção. O resto é consequência.</p>
+
+<pre><code>.lista {
+  display: flex;
+  gap: 12px;               /* espaço entre itens */
+  justify-content: center; /* eixo principal */
+  align-items: center;     /* eixo transversal */
+}</code></pre>
+
+<h3>Eixo principal vs transversal</h3>
+<p>Se <code>flex-direction: row</code>, o principal é horizontal. Se for <code>column</code>, o principal vira vertical — e o <code>justify-content</code> passa a empilhar na vertical.</p>
+
+<h2>Holy grail em 10 linhas</h2>
+<pre><code>.page { display: flex; min-height: 100vh; }
+aside { width: 240px; }
+main  { flex: 1; } /* ocupa o resto */</code></pre>
+
+<div class="callout"><strong>Truque que uso sempre:</strong> <code>flex: 1</code> no filho = "ocupe todo o espaço que sobrar".</div>
+
+<blockquote>Não decore tudo — decore 4: display:flex, direction, justify, align. O resto consulte.</blockquote>

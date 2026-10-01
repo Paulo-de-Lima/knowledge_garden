@@ -1,0 +1,30 @@
+<h2>Setup mínimo</h2>
+<pre><code>git init
+git add .
+git commit -m "primeiro commit"</code></pre>
+
+<h2>Fluxo do dia a dia</h2>
+<pre><code>git status                 # o que mudou?
+git add arquivo.js         # prepara
+git commit -m "feat: ..."  # registra
+git push origin main       # envia</code></pre>
+
+<h3>Branches sem medo</h3>
+<pre><code>git checkout -b feat/minha-ideia
+# ... codar ...
+git checkout main
+git merge feat/minha-ideia</code></pre>
+
+<h2>Desfazer sem pânico</h2>
+<ul>
+  <li><code>git restore arquivo</code> — descarta mudança ainda não commitada</li>
+  <li><code>git reset --soft HEAD~1</code> — desfaz o último commit, mantém o código</li>
+  <li><code>git log --oneline --graph</code> — entende o histórico</li>
+</ul>
+
+<div class="callout"><strong>Regra de ouro:</strong> nunca dê <code>push --force</code> em branch compartilhada.</div>
+
+<figure>
+  <img src="https://picsum.photos/seed/git/800/280" alt="Ilustração git" />
+  <figcaption>Imagem ilustrativa — troque por um print do seu terminal em assets/.</figcaption>
+</figure>

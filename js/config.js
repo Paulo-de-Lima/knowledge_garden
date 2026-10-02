@@ -11,7 +11,7 @@ const PROFILE = {
   simples, como alterar o formato de um botão, até o esquecimento de conceitos importantes
   sobre a área.`,
   objective: `Neste simples site, irei escrever posts com estudos aprofundados sobre 
-  desenvolvimento/engenharia de software, IA's, algoritmos e diversos com
+  desenvolvimento/engenharia de software, IA's, algoritmos e diversos com objetivo de
   expandir meu conhecimento, me destacar mais e, não ser 100% substituído 
   por uma inteligência artificial. Seja bem vindo 
   ao meu jardim de conhecimento.`,
